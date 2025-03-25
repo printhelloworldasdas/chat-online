@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Online - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-tabs">
+            <button class="tab active" onclick="switchTab('login')">Iniciar Sesión</button>
+            <button class="tab" onclick="switchTab('register')">Registrarse</button>
+        </div>
+
+        <div id="login-form" class="auth-form active">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" id="login-username" placeholder="Usuario" required>
+            <input type="password" id="login-password" placeholder="Contraseña" required>
+            <button onclick="login()">Entrar al Chat</button>
+            <p id="login-error" class="error-message"></p>
+        </div>
+
+        <div id="register-form" class="auth-form">
+            <h2>Registrarse</h2>
+            <input type="text" id="register-username" placeholder="Usuario" required>
+            <input type="password" id="register-password" placeholder="Contraseña" required>
+            <input type="password" id="register-confirm" placeholder="Confirmar Contraseña" required>
+            <button onclick="register()">Crear Cuenta</button>
+            <p id="register-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
